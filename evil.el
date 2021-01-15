@@ -1,0 +1,6 @@
+(require 'evil)
+(define-key evil-normal-state-map (kbd "C-u") 'evil-scroll-up)
+(evil-mode 1)
+(require 'evil-snipe)
+(evil-snipe-mode +1)
+(evil-snipe-override-mode +1)
