@@ -14,6 +14,7 @@
 
 (load-file "~/.emacs.d/evil.el")
 (load-file "~/.emacs.d/python.el")
+(load-file "~/.emacs.d/clojure.el")
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -21,7 +22,10 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(cider clojure-mode git-commit magit undo-fu evil-snipe evil-visual-mark-mode pyvenv use-package lsp-jedi lsp-mode)))
+   '(company company-lsp flycheck lsp-ui cider clojure-mode git-commit magit undo-fu evil-snipe evil-visual-mark-mode pyvenv use-package lsp-jedi lsp-mode))
+ '(safe-local-variable-values
+   '((lsp-ui-sideline-show-code-actions)
+     (lsp-ui-sideline-enable . f))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
