@@ -21,8 +21,15 @@
     (add-to-list 'lsp-disabled-clients 'pyls)
     (add-to-list 'lsp-enabled-clients 'jedi)))
 
+(use-package flycheck
+  :ensure t
+  :init (global-flycheck-mode))
+
 (add-hook 'python-mode-hook
 	  (lambda ()
+	    (pyvenv-workon "tweez-3.8.6")
+	    (flycheck-select-checker 'python-flake8)
 	    (make-local-variable 'display-fill-column-indicator-column)
 	    (setq display-fill-column-indicator-column 80)
 	    (display-fill-column-indicator-mode)))
+
