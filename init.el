@@ -4,14 +4,9 @@
 (unless package-archive-contents
   (package-refresh-contents))
 
-(load-theme 'wombat)
-(global-display-line-numbers-mode 1)
-(setq display-line-numbers-type 'relative)
-(set-fringe-mode 0)
-(scroll-bar-mode -1)
-(tool-bar-mode -1)
 (setq ring-bell-function 'ignore) 
 
+(load-file "~/.emacs.d/looks.el")
 (load-file "~/.emacs.d/evil.el")
 (load-file "~/.emacs.d/python.el")
 (load-file "~/.emacs.d/clojure.el")
@@ -21,8 +16,10 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(custom-safe-themes
+   '("3c2f28c6ba2ad7373ea4c43f28fcf2eed14818ec9f0659b1c97d4e89c99e091e" "fce3524887a0994f8b9b047aef9cc4cc017c5a93a5fb1f84d300391fba313743" "e074be1c799b509f52870ee596a5977b519f6d269455b84ed998666cf6fc802a" default))
  '(package-selected-packages
-   '(company company-lsp flycheck lsp-ui cider clojure-mode git-commit magit undo-fu evil-snipe evil-visual-mark-mode pyvenv use-package lsp-jedi lsp-mode))
+   '(ein doom-themes doom-modeline gruvbox-theme company company-lsp flycheck lsp-ui cider clojure-mode git-commit magit undo-fu evil-snipe evil-visual-mark-mode pyvenv use-package lsp-jedi lsp-mode))
  '(safe-local-variable-values
    '((lsp-ui-sideline-show-code-actions)
      (lsp-ui-sideline-enable . f))))
@@ -31,4 +28,4 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :extend nil :stipple nil :background "#242424" :foreground "#f6f3e8" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 120 :width normal :foundry "UKWN" :family "Monaco")))))
+ '(default ((t (:inherit nil :extend nil :stipple nil :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 120 :width normal :foundry "UKWN" :family "Monaco")))))

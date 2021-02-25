@@ -14,6 +14,7 @@
             ;; if you want which-key integration
             ;; (lsp-mode . lsp-enable-which-key-integration))
     :commands lsp)
+
 (use-package lsp-jedi
   :ensure t
   :config
@@ -28,8 +29,9 @@
 (add-hook 'python-mode-hook
 	  (lambda ()
 	    (pyvenv-workon "tweez-3.8.6")
-	    (flycheck-select-checker 'python-flake8)
+	    ;(make-local-variable 'flycheck-checker)
+	    ;(setq-local flycheck-checker 'python-flake8)
 	    (make-local-variable 'display-fill-column-indicator-column)
-	    (setq display-fill-column-indicator-column 80)
+	    (setq-local display-fill-column-indicator-column 80)
 	    (display-fill-column-indicator-mode)))
 
