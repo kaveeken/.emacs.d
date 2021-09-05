@@ -4,12 +4,14 @@
 (unless package-archive-contents
   (package-refresh-contents))
 
-(setq ring-bell-function 'ignore) 
+(setq ring-bell-function 'ignore)
+(setq column-number-mode t)
 
 (load-file "~/.emacs.d/looks.el")
 (load-file "~/.emacs.d/evil.el")
 (load-file "~/.emacs.d/python.el")
 (load-file "~/.emacs.d/clojure.el")
+(load-file "~/.emacs.d/spell.el")
 
 ;; R
 (use-package poly-R
@@ -36,7 +38,7 @@
  '(lsp-ui-doc-position 'at-point)
  '(lsp-ui-sideline-show-code-actions nil)
  '(package-selected-packages
-   '(which-key async-await poly-R ess-r-insert-obj ess ein doom-themes doom-modeline gruvbox-theme company company-lsp flycheck lsp-ui cider clojure-mode git-commit magit undo-fu evil-snipe evil-visual-mark-mode pyvenv use-package lsp-jedi lsp-mode))
+   '(edit-indirect dashboard pandoc-mode which-key async-await poly-R ess-r-insert-obj ess ein doom-themes doom-modeline gruvbox-theme company company-lsp flycheck lsp-ui cider clojure-mode git-commit magit undo-fu evil-snipe evil-visual-mark-mode pyvenv use-package lsp-jedi lsp-mode))
  '(safe-local-variable-values
    '((lsp-ui-sideline-show-code-actions)
      (lsp-ui-sideline-enable . f))))
