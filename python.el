@@ -1,12 +1,14 @@
 (use-package pyvenv
-:ensure t
-:defer t
-:diminish
-:config
-(setenv "WORKON_HOME" "/home/kris/.pyenv/versions/")
+  :ensure t
+  :defer t
+  :diminish
+  :config
+  (setenv "WORKON_HOME" "/home/kris/.pyenv/versions/")
 	; Show python venv name in modeline
-(setq pyvenv-mode-line-indicator '(pyvenv-virtual-env-name ("[venv:" pyvenv-virtual-env-name "] ")))
-(pyvenv-mode t))
+  (setq
+   pyvenv-mode-line-indicator '(pyvenv-virtual-env-name
+				("[venv:" pyvenv-virtual-env-name "] ")))
+  (pyvenv-mode t))
 
 (use-package elpy
   :ensure t
