@@ -9,6 +9,7 @@
 
 (load-file "~/.emacs.d/looks.el")
 (load-file "~/.emacs.d/evil.el")
+(load-file "~/.emacs.d/good.el")
 (load-file "~/.emacs.d/python.el")
 (load-file "~/.emacs.d/clojure.el")
 (load-file "~/.emacs.d/spell.el")
@@ -28,6 +29,19 @@
   :init
   (which-key-mode))
 
+(use-package company
+  :ensure t
+  :init (global-company-mode)
+  :config
+  (setq company-idle-delay 0.1))
+
+(use-package company-quickhelp
+  :ensure t
+  :defer t
+  :init (add-hook 'global-company-mode-hook #'company-quickhelp-mode)
+  :config
+  (setq company-quickhelp-delay 0.4))
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -38,7 +52,7 @@
  '(lsp-ui-doc-position 'at-point)
  '(lsp-ui-sideline-show-code-actions nil)
  '(package-selected-packages
-   '(edit-indirect dashboard pandoc-mode which-key async-await poly-R ess-r-insert-obj ess ein doom-themes doom-modeline gruvbox-theme company company-lsp flycheck lsp-ui cider clojure-mode git-commit magit undo-fu evil-snipe evil-visual-mark-mode pyvenv use-package lsp-jedi lsp-mode))
+   '(company-quickhelp edit-indirect dashboard pandoc-mode which-key async-await poly-R ess-r-insert-obj ess ein doom-themes doom-modeline gruvbox-theme company company-lsp flycheck lsp-ui cider clojure-mode git-commit magit undo-fu evil-snipe evil-visual-mark-mode pyvenv use-package lsp-jedi lsp-mode))
  '(safe-local-variable-values
    '((lsp-ui-sideline-show-code-actions)
      (lsp-ui-sideline-enable . f))))
