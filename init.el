@@ -12,7 +12,7 @@
 (load-file "~/.emacs.d/good.el")
 (load-file "~/.emacs.d/python.el")
 (load-file "~/.emacs.d/clojure.el")
-(load-file "~/.emacs.d/spell.el")
+;(load-file "~/.emacs.d/spell.el")
 (load-file "~/.emacs.d/org.el")
 
 (use-package poly-R
