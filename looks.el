@@ -56,3 +56,16 @@
   (set-window-width 87)) ;; including line numbers etc
 
 (global-set-key (kbd "<f5>") 'set-80-columns)
+
+(defun fix-window-vertical ()
+  "Fixes the current buffer's window height."
+  (interactive)
+  (window-preserve-size))
+
+(defun fix-window-horizontal ()
+  "Fixes the current buffer's window height."
+  (interactive)
+  (window-preserve-size (get-buffer-window) t))
+
+(global-set-key (kbd "<f6>") 'fix-window-vertical)
+(global-set-key (kbd "S-<f6>") 'fix-window-horizontal)
