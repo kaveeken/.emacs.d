@@ -16,6 +16,7 @@
   (doom-themes-org-config))
 
 (defun synchronize-theme ()
+  (interactive)
   (setq hour
     (string-to-number
      (substring (current-time-string) 11 13)))
@@ -23,7 +24,8 @@
       (load-theme 'doom-acario-light t) ;; redundant load-themes
     (load-theme 'doom-one t)))
 
-(run-with-timer 0 3600 (synchronize-theme))
+
+(run-with-timer 0 3600 'synchronize-theme)
 
 
 (global-display-line-numbers-mode 1)
