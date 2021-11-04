@@ -7,6 +7,7 @@
 
 (setq nrepl-use-ssh-fallback-for-remote-hosts t)
 
+
 ;; https://blog.brunobonacci.com/2016/03/18/emacs-incanter-hack/
 ;; Incanter eval and display chart
 ;;
